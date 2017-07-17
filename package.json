@@ -7,7 +7,7 @@
   "author": "Lee Marsden",
   "license": "MIT",
   "scripts": {
-    "clean": "echo '=> cleaning' && rm -rf dist",
+    "clean": "rm -rf dist",
     "test": "mocha --require babel-core/register src/js/**/*.test.js",
     "html": "nunjucks *.tpl -p src/html -o dist src/html/data.json",
     "stylelint": "stylelint 'src/css/**/**/*.scss' --syntax scss",
@@ -50,15 +50,16 @@
     "node-sass": "^4.5.2",
     "nunjucks-cli": "^0.5.1",
     "onchange": "^3.2.1",
-    "parallelshell": "^2.0.0",
+    "parallelshell": "^3.0.1",
     "postcss": "^5.2.17",
     "postcss-cli": "^3.1.1",
     "postcss-csso": "^2.0.0",
     "postcss-focus": "^1.0.0",
     "postcss-pxtorem": "^4.0.0",
     "postcss-vr": "^3.0.1",
-    "stylelint": "^7.10.1",
+    "stylelint": "^7.13.0",
     "stylelint-config-standard": "^16.0.0",
-    "uglify-js": "^2.8.22"
-  }
+    "uglify-js": "^2.8.29"
+  },
+  "dependencies": {}
 }

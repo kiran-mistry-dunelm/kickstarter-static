@@ -1,0 +1,30 @@
+// 05/LAYOUT - GRID-FLOAT
+
+.l-grid {
+  margin-left: $gutter;
+
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  &_item {
+    float: left;
+    padding-left: $gutter;
+  }
+}
+
+@mixin grid-widths($namespace: "") {
+  @for $i from 1 through $grid-columns {
+    .l-span#{$i}#{$namespace} {
+      width: (100% / 12) * $i;
+    }
+  }
+}
+
+@include grid-widths();
